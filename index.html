@@ -8,6 +8,7 @@
      <!-- Bootstap link  -->
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
      <!-- css link -->
+     <link rel="stylesheet" href="responsive.css">
      <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -37,14 +38,15 @@
 
        </div>
 
-       <div class="container transaction-container">
+       <div id="transaction-container" class="container transactionContainer">
 
         <section class="transaction-section"> 
             <div class="row">
+
               <div class="col-md-4 ">
                 <div class="deposit box">
                   <h2>Deposit</h2>
-                  <h5>$ 00
+                  <h5>$ <span id="current-deposit">00</span>
                   </h5>
                 </div>
               </div>
@@ -53,7 +55,7 @@
                 <div class="withdraw box">
                   <h2>Withdraw
                   </h2>
-                  <h5>$ 00
+                  <h5>$ <span id="current-withdraw">00</span> 
                   </h5>
                 </div>
               </div>
@@ -61,11 +63,45 @@
               <div class="col-md-4">
                 <div class="balance box">
                   <h2>Balance</h2>
-                  <h5>$ 1240
+                  <h5>$ <span id="current-blance"> 1240</span>
                   </h5>
                 </div>
               </div>
+
             </div>
+
+            <div class="row mt-5">
+
+              <div class="col-md-6">
+
+                <div class="depositColum box">
+                  <h4>Deposit</h4>
+
+                  <div class="form-group">
+                      <input  class="form-control"  type="text" placeholder="$ Amount you want to Deposit" id="deposit-input">
+                  </div>
+
+                  <button class="btn btn-success btn-block" id="deposit-button">Deposit</button>
+                </div>
+
+              </div>
+
+              <div class="col-md-6">
+
+                <div class="withdrawColum box">
+                  <h4>Withdraw</h4>
+
+                  <div class="form-group">
+                    <input class="form-control" type="text" placeholder="$ Amount you want to Withdraw" id="withdraw-input">
+                  </div>
+
+                  <button class="btn btn-success btn-block" id="withdraw-button">Withdraw</button>
+                </div>
+
+              </div>
+              
+            </div>
+
         </section>
 
        </div>
